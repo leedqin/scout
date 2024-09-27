@@ -1,0 +1,48 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")  
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  name         String
+  phoneNumber  String
+  email        String?   @unique
+  isCoach      Boolean   @default(false)
+  slots        Slot[]    @relation("CoachSlots")
+  bookings     Booking[]
+}
+
+model Slot {
+  id         Int       @id @default(autoincrement())
+  startTime  DateTime
+  endTime    DateTime
+  isBooked   Boolean   @default(false)
+  coach      User      @relation("CoachSlots", fields: [coachId], references: [id], onDelete: Cascade)
+  coachId    Int
+  booking    Booking?  @relation("SlotBooking") 
+}
+
+model Booking {
+  id          Int       @id @default(autoincrement())
+  student     User      @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  studentId   Int
+  slot        Slot      @relation("SlotBooking", fields: [slotId], references: [id], onDelete: Cascade)
+  slotId      Int       @unique
+  feedback    Feedback?
+  needsReview Boolean   @default(true) 
+}
+
+model Feedback {
+  id        Int     @id @default(autoincrement())
+  booking   Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  bookingId Int     @unique
+  score     Int
+  notes     String?
+}
