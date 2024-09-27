@@ -57,7 +57,7 @@ npm run seed
 
 To start the application run:
 
-````bash
+```
 npm run dev
 ```
 
