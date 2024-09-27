@@ -88,9 +88,9 @@ The APIs are available under `/pages/api`. Here’s a breakdown of the main rout
 
 ### Running the Frontend
 To run the frontend:
-```bash
+```
 npm run dev
-
+```
 
 
 ### Prerequisites
@@ -100,10 +100,10 @@ npm run dev
 
 ### Clone the Repository
 
-```bash
+```
 git clone <repository-url>
 cd scout-coaching-booking-platform
-````
+```
 
 The landing page will provide options to navigate as a **Coach** or a **Student**.
 
