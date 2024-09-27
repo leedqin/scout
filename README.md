@@ -61,50 +61,35 @@ To start the application run:
 npm run dev
 ```
 
-##API Routes
-The APIs are available under /pages/api. Here’s a breakdown of the main routes:
+## API Routes
 
-Coach APIs
-GET ```/api/coach/[id]: Get coach details by ID```
-GET ```/api/coach/bookings: Fetch coach bookings```
-POST /api/coach/createSlot: Create a new slot for the coach
-DELETE /api/coach/deleteSlot: Delete a coach's slot
-GET /api/coach/openSlot: Fetch open slots
-POST /api/coach/submitFeedback: Submit feedback
-Student APIs
-GET /api/student/[id]: Get student details by ID
-GET /api/students/getBookings: Fetch student bookings
-POST /api/students/createBookings: Create a booking
-DELETE /api/students/cancelBookings: Cancel a booking
-GET /api/slots/openSlot: Fetch open slots
-Shared APIs
-GET /api/students: Fetch all students
-GET /api/coach: Fetch all coaches
-Frontend Overview
-Running the Frontend
+The APIs are available under `/pages/api`. Here’s a breakdown of the main routes:
+
+### Coach APIs
+- **GET** `/api/coach/[id]`: Get coach details by ID
+- **GET** `/api/coach/bookings`: Fetch coach bookings
+- **POST** `/api/coach/createSlot`: Create a new slot for the coach
+- **DELETE** `/api/coach/deleteSlot`: Delete a coach's slot
+- **GET** `/api/coach/openSlot`: Fetch open slots
+- **POST** `/api/coach/submitFeedback`: Submit feedback
+
+### Student APIs
+- **GET** `/api/student/[id]`: Get student details by ID
+- **GET** `/api/students/getBookings`: Fetch student bookings
+- **POST** `/api/students/createBookings`: Create a booking
+- **DELETE** `/api/students/cancelBookings`: Cancel a booking
+- **GET** `/api/slots/openSlot`: Fetch open slots
+
+### Shared APIs
+- **GET** `/api/students`: Fetch all students
+- **GET** `/api/coach`: Fetch all coaches
+
+## Frontend Overview
+
+### Running the Frontend
 To run the frontend:
-
-bash
-Copy code
+```bash
 npm run dev
-The landing page will provide options to navigate as a Coach or a Student.
-
-Coach View
-Slot Management: Create, view, and delete slots.
-Booking Review: Review bookings and submit feedback.
-Student Information: View booked students' details.
-Student View
-Slot Booking: Create bookings with available slots.
-View Bookings: View and manage upcoming bookings.
-Dependencies
-Zustand for state management
-ShadCN for UI components
-Date-fns and date-fns-tz for date and time handling
-Additional Notes
-The database schema can be found in /prisma/schema.prisma.
-For a detailed breakdown of the app's components, see the source code documentation.
-
-The app will be available at http://localhost:3000.
 
 
 
