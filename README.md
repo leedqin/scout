@@ -59,13 +59,14 @@ To start the application run:
 
 ````bash
 npm run dev
+```
 
-API Routes
+##API Routes
 The APIs are available under /pages/api. Here’s a breakdown of the main routes:
 
 Coach APIs
-GET /api/coach/[id]: Get coach details by ID
-GET /api/coach/bookings: Fetch coach bookings
+GET ```/api/coach/[id]: Get coach details by ID```
+GET ```/api/coach/bookings: Fetch coach bookings```
 POST /api/coach/createSlot: Create a new slot for the coach
 DELETE /api/coach/deleteSlot: Delete a coach's slot
 GET /api/coach/openSlot: Fetch open slots
