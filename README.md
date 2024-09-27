@@ -104,3 +104,25 @@ npm run dev
 git clone <repository-url>
 cd scout-coaching-booking-platform
 ````
+
+The landing page will provide options to navigate as a **Coach** or a **Student**.
+
+## Coach View
+- **Slot Management:** Create, view, and delete slots.
+- **Booking Review:** Review bookings and submit feedback.
+- **Student Information:** View booked students' details.
+
+## Student View
+- **Slot Booking:** Create bookings with available slots.
+- **View Bookings:** View and manage upcoming bookings.
+
+## Dependencies
+- **Zustand** for state management
+- **ShadCN** for UI components
+- **Date-fns** and **date-fns-tz** for date and time handling
+
+## Additional Notes
+- The database schema can be found in `/prisma/schema.prisma`.
+- For a detailed breakdown of the app's components, see the source code documentation.
+
+The app will be available at [http://localhost:3000](http://localhost:3000).
